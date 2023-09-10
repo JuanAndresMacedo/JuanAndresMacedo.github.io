@@ -217,13 +217,11 @@ const aboutMeText = document.getElementById("aboutMe-text-container");
 let indice = 0;
 const arrayText = [];
 arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
-    "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí." +
-    "<br><br>Aquí están mis intereses personales, para fines profesionales puedes estar interesado en mi " +
-    "trabajo o mis habilidades.";
+    "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí.";
 
-arrayText[1] = "Como puedes ver, soy amante de la tecnología y algo nostálgico, " +
-    "¡a veces mi trabajo se convierte en un pasatiempo! Supongo que puedes notar mi interés por el estilo retro, " +
-    "la animación, el arte pixelado, los videojuegos y la estética vaporwave.";
+arrayText[1] = "Lorem ipsum dolor sit amet consectetur adipiscing elit, vulputate cum nulla felis curae in venenatis" + 
+"himenaeos, laoreet litora nibh mi vestibulum fermentum.Aenean suscipit dignissim dapibus massa nunc potenti per" + 
+"sapien, lobortis pharetra consequat torquent hac iaculis habitant, eget ornare primis nostra tristique congue";
 
 arrayText[2] = "hola";
 
