@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Andres - Portfolio</title>
+    <!-- FavIcon -->
+    <link rel="icon" href="img/favIcon.png">
+    <!-- FontAwsome -->
+    <script src="https://kit.fontawesome.com/76c60fe346.js" crossorigin="anonymous"></script>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div id="landscape-container">
+            <img id="landscapeIcon" src="img/icons/landscape.png" alt="Landscape Icon">
+        </div>
+    </header>
+
+    <!-- Body -->
+    <div id="screen">
+        <div class="icon-container icon-container-styles" data-target="project-window/minimized-project-window"
+            data-src="img/icons/folder.png" data-text="Proyectos">
+            <img class="icon" src="img/icons/folder.png" alt="Folder Icon">
+            <span class="icon-text">Proyectos</span>
+        </div>
+        <div class="icon-container icon-container-styles" data-target="aboutMe-window/minimized-aboutMe-window" data-src="img/icons/book.png"
+            data-text="Sobre Mi">
+            <img class="icon" src="img/icons/book.png" alt="Book Icon">
+            <span class="icon-text">Sobre Mi</span>
+        </div>
+        <div class="icon-container icon-container-styles" data-target="skills-window/minimized-skills-window" data-src="img/icons/brushes.png"
+            data-text="Habilidades">
+            <img class="icon" src="img/icons/brushes.png" alt="Brushes Icon">
+            <span class="icon-text">Habilidades</span>
+        </div>
+        <a href="/files/Currículum Juan Andrés.pdf" class="icon-container-styles">
+            <img class="icon" src="img/icons/note.png" alt="Note Icon">
+            <span class="icon-text">Currículum</span>
+        </a>
+
+        <!-- Programs Window -->
+        <div id="programs-window" class="border window open" data-target="minimized-aboutMe-window">
+
+            <!-- Programs Window Top Bar -->
+            <div class="top-bar">
+                <div class="window-name">
+                    <img id="programs-window-topBar-icon" class="topBar-icon" src="img/icons/book.png"
+                        alt="Brushes Icon">
+                    <span id="programs-window-topBar-name">Sobre Mi</span>
+                </div>
+                <div class="triple-button">
+                    <button id="minimize-button"><span class="minimize-icon"></span></button>
+                    <button id="expand-button"><span class="expand-icon"></span></button>
+                    <button id="close-button" class="close-button">×</button>
+                </div>
+            </div>
+
+            <!-- Interactive Window Content Container -->
+            <div class="content-container">
+
+                <!-- Project Window -->
+                <div id="project-window" class="window">
+
+                    <!-- Left Content -->
+                    <div class="left-content border">
+
+                        <!-- Personal Pojects Container -->
+                        <div id="personal-projects-container">
+                            <h2 class="proyect-window-title">Proyectos personales</h2>
+
+                            <!-- Pojects Container -->
+                            <div class="projects-container">
+                                <div class="project" data-target="orderEat-window" data-name="OrderEat"
+                                    data-src="img/icons/logoOrderEat.png">
+                                    <div class="project-icon-container">
+                                        <img class="folderIcon" src="img/icons/greenFolder.png" alt="">
+                                        <img class="project-icon" src="img/icons/logoOrderEat.png">
+                                    </div>
+                                    <div class="project-text-container">
+                                        <span class="icon-text">OrderEat</span>
+                                    </div>
+                                </div>
+
+                                <div class="project" data-target="controldeInventario-window"
+                                    data-name="Control de Inventario" data-src="img/icons/logoDron.png">
+                                    <div class="project-icon-container">
+                                        <img class="folderIcon" src="img/icons/greenFolder.png" alt="">
+                                        <img class="project-icon" src="img/icons/logoDron.png">
+                                    </div>
+                                    <div class="project-text-container">
+                                        <span class="icon-text">Control de Inventario</span>
+                                    </div>
+                                </div>
+
+                                <!--
+                                <div class="project">
+                                    <div class="project-icon-container">
+                                        <img class="folderIcon" src="img/icons/greenFolder.png" alt="">
+                                        <img class="project-icon" src="img/icons/logoOrderEat.png">
+                                    </div>
+                                    <div class="project-text-container">
+                                        <span class="icon-text">OrderEat</span>
+                                    </div>
+                                </div>
+
+                                <div class="project">
+                                    <div class="project-icon-container">
+                                        <img class="folderIcon" src="img/icons/greenFolder.png" alt="">
+                                        <img class="project-icon" src="img/icons/logoDron.png">
+                                    </div>
+                                    <div class="project-text-container">
+                                        <span class="icon-text">Control de Inventario</span>
+                                    </div>
+                                </div>-->
+
+                            </div>
+                        </div>
+
+                        <!-- Faculty Pojects Container -->
+                        <div id="faculty-projects-container">
+                            <h2 class="proyect-window-title">Proyectos facultad</h2>
+
+                            <!-- Pojects Container -->
+                            <div class="projects-container">
+                                <div class="project" data-target="juegoDistancia-window" data-name="Juego Distancia"
+                                    data-src="img/icons/logoJuego.png">
+                                    <div class="project-icon-container">
+                                        <img class="folderIcon" src="img/icons/big-folder.png" alt="">
+                                        <img class="project-icon" src="img/icons/logoJuego.png">
+                                    </div>
+                                    <div class="project-text-container">
+                                        <span class="icon-text">Juego Distancia</span>
+                                    </div>
+                                </div>
+                                <div class="project" data-target="ejerciciosC++-window" data-name="Ejercicios C/C++"
+                                    data-src="img/icons/logoC++.png">
+                                    <div class="project-icon-container">
+                                        <img class="folderIcon" src="img/icons/big-folder.png" alt="">
+                                        <img class="project-icon" src="img/icons/logoC++.png">
+                                    </div>
+                                    <div class="project-text-container">
+                                        <span class="icon-text">Ejercicios C/C++</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Content -->
+                    <div class="right-content border">
+
+                        <!-- Help Window -->
+                        <div id="help-window" class="border">
+
+                            <!-- Help Top Bar -->
+                            <div class="top-bar">
+                                <div class="window-name">
+                                    <img class="topBar-icon" src="img/icons/globeIcon.png" alt="Globe Icon">
+                                    <span>Navegación</span>
+                                </div>
+                                <button id="help-close-button" class="close-button">×</button>
+                            </div>
+
+                            <!-- Help Message -->
+                            <div id="help-window-content">
+                                <img id="questionMarkIcon" class="icon" src="img/icons/questionMark.png"
+                                    alt="Question Mark Icon">
+                                <p>Haz clic en un proyecto para ver los detalles del mismo. Puedes navegar por los
+                                    elementos arrastrando el mouse.</p>
+                            </div>
+                        </div>
+
+                        <!-- Project Information Window -->
+                        <div id="project-information-window" class="border open">
+
+                            <!-- Project Top Bar -->
+                            <div id="project-topBar" class="top-bar">
+                                <div class="window-name">
+                                    <img id="project-topBar-icon" class="topBar-icon" src="img/icons/globeIcon.png"
+                                        alt="Brushes Icon">
+                                    <span id="project-topBar-name">Navegación</span>
+                                </div>
+                                <button id="project-close-button" class="close-button">×</button>
+                            </div>
+
+                            <!-- Project Contents -->
+                            <div id="orderEat-window" class="project-content">
+                                <div class="projectImage border"></div>
+                                <!-- <img id="imagen" src="img/captura1.PNG" alt=""> -->
+                                <div class="project-description">
+                                    <p>
+                                        University Blanquerna website for Masters degree information and
+                                        purchase,
+                                        blog, and educational related content. The website consists of the
+                                        following
+                                        parts: a CMS section for content creation by the university using Drupal
+                                        with customized modules. This data is integrated with the university's
+                                        API
+                                        in a backend that is then collected by Nextjs to serve as the frontend.
+                                        University Blanquerna website for Masters degree information and
+                                        purchase,
+                                        blog, and educational related content. The website consists of the
+                                        following
+                                        parts: a CMS section for content creation by the university using Drupal
+                                        with customized modules. This data is integrated with the university's
+                                        API
+                                        in a backend that is then collected by Nextjs to serve as the frontend.
+                                    </p>
+                                </div>
+                                <button id="visit-button">Visitar</button>
+                            </div>
+
+                            <div id="controldeInventario-window" class="project-content">
+                                <div class="projectImage border"></div>
+                                <!-- <img id="imagen" src="img/captura1.PNG" alt=""> -->
+                                <div class="project-description">
+                                    <p>
+                                        University Blanquerna website for Masters degree information and
+                                        purchase,
+                                        blog, and educational related content. The website consists of the
+                                        following
+                                        parts: a CMS section for content creation by the university using Drupal
+                                        with customized modules. This data is integrated with the university's
+                                        API
+                                        in a backend that is then collected by Nextjs to serve as the frontend.
+                                        University Blanquerna website for Masters degree information and
+                                        purchase,
+                                        blog, and educational related content. The website consists of the
+                                        following
+                                        parts: a CMS section for content creation by the university using Drupal
+                                        with customized modules. This data is integrated with the university's
+                                        API
+                                        in a backend that is then collected by Nextjs to serve as the frontend.
+                                    </p>
+                                </div>
+                                <button id="visit-button">Visitar</button>
+                            </div>
+
+                            <div id="juegoDistancia-window" class="project-content">
+                                <div class="projectImage border"></div>
+                                <div class="project-description">
+                                    <p>
+                                        University Blanquerna website for Masters degree information and
+                                        purchase,
+                                        blog, and educational related content. The website consists of the
+                                        following
+                                        parts: a CMS section for content creation by the university using Drupal
+                                        with customized modules. This data is integrated with the university's
+                                        API
+                                        in a backend that is then collected by Nextjs to serve as the frontend.
+                                        University Blanquerna website for Masters degree information and
+                                        purchase,
+                                        blog, and educational related content. The website consists of the
+                                        following
+                                        parts: a CMS section for content creation by the university using Drupal
+                                        with customized modules. This data is integrated with the university's
+                                        API
+                                        in a backend that is then collected by Nextjs to serve as the frontend.
+                                    </p>
+                                </div>
+                                <button id="visit-button">Visitar</button>
+                            </div>
+
+                            <div id="ejerciciosC++-window" class="project-content">
+                                <div class="projectImage border"></div>
+                                <div class="project-description">
+                                    <p>
+                                        University Blanquerna website for Masters degree information and
+                                        purchase,
+                                        blog, and educational related content. The website consists of the
+                                        following
+                                        parts: a CMS section for content creation by the university using Drupal
+                                        with customized modules. This data is integrated with the university's
+                                        API
+                                        in a backend that is then collected by Nextjs to serve as the frontend.
+                                        University Blanquerna website for Masters degree information and
+                                        purchase,
+                                        blog, and educational related content. The website consists of the
+                                        following
+                                        parts: a CMS section for content creation by the university using Drupal
+                                        with customized modules. This data is integrated with the university's
+                                        API
+                                        in a backend that is then collected by Nextjs to serve as the frontend.
+                                    </p>
+                                </div>
+                                <button id="visit-button">Visitar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AboutMe Window -->
+                <div id="aboutMe-window" class="window border">
+                    <div class="title-container">
+                        <h1 class="aboutMe-title">&lt;Juan Andrés Macedo&gt;</h1>
+                        <span id="title1" class="aboutMe-title moving-span">&lt;Juan Andrés Macedo&gt;</span>
+                        <span id="title2" class="aboutMe-title moving-span">&lt;Juan Andrés Macedo&gt;</span>
+                    </div>
+                    <span>Desarrollador Front-End</span>
+                    <div id="presentation-container">
+                        <!-- <img id="roverGif" src="img/clippy.gif" alt="">-->
+                        <div id="aboutMe-text-container" class="aboutMe-text-container open">
+                            ¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio
+                            web, un lugar donde comparto mis proyectos y permito que las personas conozcan un poco
+                            más sobre mí.<br><br>Aquí están mis intereses personales, para fines profesionales
+                            puedes estar interesado en mi trabajo o mis habilidades.
+                        </div>
+                        <div id="aboutMe-button-container">
+                            <button id="right-button" class="aboutMe-button">▶</button>
+                            <button id="left-button" class="aboutMe-button">◀</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Window -->
+                <div id="skills-window" class="window border">
+
+                    <p id="Stack" class="skills-title">Stack</p>
+                    <p id="Actual" class="skills-title">Actual</p>
+                    <div id="computer">
+                        <div id="computerScreen" class="on">
+                            <p> Mi conjunto actual de tecnologías representa mi base sólida de habilidades y mi área de
+                                enfoque actual. Estas son las tecnologías con las que me siento más cómodo y en las que
+                                estoy trabajando para especializarme aún más.
+                            </p>
+                            <div id="technologies">
+                                <div class="technology" id="html">Html</div>
+                                <div class="technology" id="css">Css</div>
+                                <div class="technology" id="js">JavaScript</div>
+                                <div class="technology" id="java">Java</div>
+                                <div class="technology" id="c">C#</div>
+                                <div class="technology" id="sql">SQL</div>
+                                <div class="technology">Git</div>
+                                <div class="technology">Jest</div>
+                                <div class="technology">Bootstrap</div>
+                                <div class="technology">.Net</div>
+                                <div class="technology">NodeJs</div>
+                                <div class="technology">MongoDB</div>
+                            </div>
+                        </div>
+                        <div id="start">
+                            <img id="start-computer-icon" src="img/icons/startComputer.png" alt="">
+                        </div>
+                        <div id="redLight"></div>
+                        <div id="greenLight"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="start-menu">
+        <div id="start-banner">
+            <img id="start-banner-image" src="img/icons/windows95png.png" alt="">
+        </div>
+        <div id="shortcuts">
+            <a class="link" href="https://www.linkedin.com/in/juan-andres-macedo/">
+                <div class="shortcut">
+                    <img class="shortcut-image" src="img/shortcuts/linkedin.jpg" alt="">
+                    Linkedin
+                </div>
+            </a>
+            <a class="link" href="https://github.com/JuanAndresMacedo">
+                <div class="shortcut">
+                    <img class="shortcut-image" src="img/shortcuts/gitHub.jpg" alt="">
+                    GitHub
+                </div>
+            </a>
+            <div id="divider-line"></div>
+            <a class="link" href="mailto:juamacedo2003@hotmail.com">
+                <div class="shortcut">
+                    <img class="shortcut-image" src="img/icons/envelope.png" alt="">
+                    Correo
+                </div>
+            </a>
+            <a id="linkProjects" class="link" data-target="project-window/minimized-project-window"
+            data-src="img/icons/folder.png" data-text="Proyectos">
+                <div class="shortcut">
+                    <img class="shortcut-image" src="img/icons/folder.png" alt="">
+                    Proyectos
+                </div>
+            </a>
+            <a class="link" href="/files/Currículum Juan Andrés.pdf">
+                <div class="shortcut">
+                    <img class="shortcut-image" src="img/icons/note.png" alt="">
+                    Curriculum
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div id="start-button-container">
+            <img id="startIcon" src="img/icons/windows.png" alt="Windows Icon">
+            <span id="startText">Inicio</span>
+        </div>
+    </footer>
+
+    <script src="jQuery.min.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+</body>
+
+</html>
