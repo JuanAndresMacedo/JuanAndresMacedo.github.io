@@ -150,7 +150,7 @@ header {
     padding: 40px 20px 40px 20px;
     margin: 0;
     width: 100%;
-    background-image: url("img/backgrounds/planetCopy.jpg");
+    background-image: url("img/backgrounds/planetCopy.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -372,7 +372,7 @@ header {
 .right-content {
     height: 100%;
     width: 65%;
-    background-image: url("img/backgrounds/space.jpg");
+    background-image: url("img/backgrounds/space.webp");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -528,7 +528,7 @@ header {
 #skills-window {
     width: 100%;
     height: auto;
-    background: url(img/backgrounds/starryNight.jpg);
+    background: url("img/backgrounds/starryNight.webp");
 
     display: none;
     flex-direction: column;
