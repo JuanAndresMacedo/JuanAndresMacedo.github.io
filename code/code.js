@@ -257,17 +257,18 @@ leftButton.addEventListener("click", function () {
 
 //--------------------------------------- Text moves towards mouse effect ------------------------------------------
 
-$("#aboutMe-window").mousemove(function (event) {
+const nameSpans = document.querySelectorAll(".moving-span");
+
+aboutMeWindow.addEventListener("mousemove", function(event) {
     const mouseX = event.pageX;
     const mouseY = event.pageY;
 
-    const nameSpan = $(".moving-span");
+    nameSpans.forEach((nameSpan) => {
+        const xOffset = (mouseX / window.innerWidth) * 8;
+        const yOffset = (mouseY / window.innerHeight) * 8;
 
-    // Calcula el desplazamiento en función de la posición del mouse
-    const xOffset = (mouseX / window.innerWidth) * 8;
-    const yOffset = (mouseY / window.innerHeight) * 8;
-
-    nameSpan.css({ "transform": `translate(${xOffset}px, ${yOffset}px)` });
+        nameSpan.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+    });
 });
 
 //------------------------------------------ Change Background --------------------------------------------
@@ -276,7 +277,7 @@ $("#aboutMe-window").mousemove(function (event) {
 //POS: Change the background to an image or color
 backgroundChange.addEventListener("click", function () {
     const body = document.body;
-    body.style.backgroundImage = "url(img/backgrounds/background.jpg)";
+    body.style.backgroundImage = "url(img/backgrounds/background.webp)";
 });
 
 //--------------------------------------- Horizontal Slide ------------------------------------------
