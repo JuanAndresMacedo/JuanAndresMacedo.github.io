@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+.preloaded-images{
+    display: none;
+}
+
 body {
     /*background-image: url("./img/background.jpg");*/
     font-family: 'VT323', monospace;
