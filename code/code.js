@@ -159,6 +159,7 @@ iconContainers.forEach(iconContainer => {
         showContentWindow(windowId);
         showOpenProgram(programeId, windowId, iconContainer.getAttribute('data-src'),
             iconContainer.getAttribute('data-text'));
+        preloadProjectImage();
     });
 });
 
@@ -219,9 +220,9 @@ const arrayText = [];
 arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
     "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí.";
 
-arrayText[1] = "Lorem ipsum dolor sit amet consectetur adipiscing elit, vulputate cum nulla felis curae in venenatis" + 
-"himenaeos, laoreet litora nibh mi vestibulum fermentum.Aenean suscipit dignissim dapibus massa nunc potenti per" + 
-"sapien, lobortis pharetra consequat torquent hac iaculis habitant, eget ornare primis nostra tristique congue";
+arrayText[1] = "Lorem ipsum dolor sit amet consectetur adipiscing elit, vulputate cum nulla felis curae in venenatis" +
+    "himenaeos, laoreet litora nibh mi vestibulum fermentum.Aenean suscipit dignissim dapibus massa nunc potenti per" +
+    "sapien, lobortis pharetra consequat torquent hac iaculis habitant, eget ornare primis nostra tristique congue";
 
 arrayText[2] = "hola";
 
@@ -259,7 +260,7 @@ leftButton.addEventListener("click", function () {
 
 const nameSpans = document.querySelectorAll(".moving-span");
 
-aboutMeWindow.addEventListener("mousemove", function(event) {
+aboutMeWindow.addEventListener("mousemove", function (event) {
     const mouseX = event.pageX;
     const mouseY = event.pageY;
 
@@ -399,6 +400,7 @@ linkProjects.addEventListener("click", () => {
     showContentWindow(windowId);
     showOpenProgram(programeId, windowId, linkProjects.getAttribute('data-src'),
         linkProjects.getAttribute('data-text'));
+    preloadProjectImage();
 });
 
 const links = document.querySelectorAll(".link");
@@ -407,3 +409,16 @@ links.forEach(link => {
         openCloseStartMenu();
     });
 });
+
+const arrayImages = document.querySelectorAll(".preloadProjectImage")
+const preloadedImagesContainer = document.getElementById("preloaded-images-container");
+
+function preloadProjectImage() {
+    arrayImages.forEach(img => {
+
+        const newImage = document.createElement('img');
+        newImage.src = img.src;
+        newImage.classList.add('preloaded-images');
+        preloadedImagesContainer.appendChild(newImage);
+    });
+}
