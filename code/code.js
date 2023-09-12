@@ -4,6 +4,7 @@ window.addEventListener('load', inicio);
 
 function inicio() {
     showOpenProgram("minimized-aboutMe-window", "aboutMe-window", "img/icons/book.png", "Sobre Mi");
+    fillContentWindow("aboutMe-window");
 }
 
 //------- Windows --------
@@ -130,10 +131,40 @@ function fillTopBar(topBarIcon, topBarName, src, text) {
 //POS: Fill each content window with the default information
 function fillContentWindow(id) {
     if (id == "aboutMe-window") {
-        indice = 0;
-        aboutMeText.innerHTML = arrayText[indice];
+        index = 0;
         rightButton.style.color = "black";
         leftButton.style.color = "#9b9b9b";
+
+        changeArrayTextDependingOnWindowWidth();
+        aboutMeText.innerHTML = arrayText[index];
+    }
+
+    if (id == "project-window") {
+        preloadProjectImage();
+    }
+}
+
+function changeArrayTextDependingOnWindowWidth() {
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth < 600) {
+        arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
+            "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí.";
+        arrayText[1] = "Aquí están mis intereses personales, para fines profesionales puedes estar interesado en mi" +
+            "trabajo o mis habilidades."
+        arrayText[2] = "Como puedes ver, soy amante de la tecnología y algo nostálgico, " +
+            "¡a veces mi trabajo se convierte en un pasatiempo! Supongo que puedes notar mi interés por el estilo retro, " +
+            "la animación, el arte pixelado, los videojuegos y la estética vaporwave.";
+        arrayText[3] = "hola";
+    } else {
+        arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
+            "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí." +
+            "<br><br>Aquí están mis intereses personales, para fines profesionales puedes estar interesado en mi" +
+            "trabajo o mis habilidades.";
+        arrayText[1] = "Como puedes ver, soy amante de la tecnología y algo nostálgico, " +
+            "¡a veces mi trabajo se convierte en un pasatiempo! Supongo que puedes notar mi interés por el estilo retro, " +
+            "la animación, el arte pixelado, los videojuegos y la estética vaporwave.";
+        arrayText[2] = "hola";
     }
 }
 
@@ -159,7 +190,6 @@ iconContainers.forEach(iconContainer => {
         showContentWindow(windowId);
         showOpenProgram(programeId, windowId, iconContainer.getAttribute('data-src'),
             iconContainer.getAttribute('data-text'));
-        preloadProjectImage();
     });
 });
 
@@ -215,10 +245,12 @@ const rightButton = document.getElementById("right-button");
 const leftButton = document.getElementById("left-button");
 const aboutMeText = document.getElementById("aboutMe-text-container");
 
-let indice = 0;
+let index = 0;
 const arrayText = [];
 arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
-    "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí.";
+    "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí." +
+    "<br><br>Aquí están mis intereses personales, para fines profesionales puedes estar interesado en mi" +
+    "trabajo o mis habilidades.";
 
 arrayText[1] = "Como puedes ver, soy amante de la tecnología y algo nostálgico, " +
     "¡a veces mi trabajo se convierte en un pasatiempo! Supongo que puedes notar mi interés por el estilo retro, " +
@@ -233,25 +265,25 @@ function applySlideInAboutMeTextAnimation() {
 }
 
 rightButton.addEventListener("click", function () {
-    if (indice < arrayText.length - 1) {
+    if (index < arrayText.length - 1) {
         leftButton.style.color = "black";
-        if (indice == arrayText.length - 2) {
+        if (index == arrayText.length - 2) {
             rightButton.style.color = "#9b9b9b";
         }
-        indice++;
-        aboutMeText.innerHTML = arrayText[indice];
+        index++;
+        aboutMeText.innerHTML = arrayText[index];
         applySlideInAboutMeTextAnimation();
     }
 });
 
 leftButton.addEventListener("click", function () {
-    if (indice > 0) {
+    if (index > 0) {
         rightButton.style.color = "black";
-        if (indice == 1) {
+        if (index == 1) {
             leftButton.style.color = "#9b9b9b";
         }
-        indice--;
-        aboutMeText.innerHTML = arrayText[indice];
+        index--;
+        aboutMeText.innerHTML = arrayText[index];
         applySlideInAboutMeTextAnimation();
     }
 });
@@ -400,7 +432,6 @@ linkProjects.addEventListener("click", () => {
     showContentWindow(windowId);
     showOpenProgram(programeId, windowId, linkProjects.getAttribute('data-src'),
         linkProjects.getAttribute('data-text'));
-    preloadProjectImage();
 });
 
 const links = document.querySelectorAll(".link");
