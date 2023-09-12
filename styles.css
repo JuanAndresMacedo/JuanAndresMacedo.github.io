@@ -220,7 +220,7 @@ header {
 
 .aboutMe-text-container {
     width: 40%;
-    max-height: 80%;
+    height: auto;
     background-color: #5a5a5a;
     /*border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -1094,7 +1094,6 @@ footer {
 
     .aboutMe-text-container {
         width: 100%;
-        max-height: 100%;
         padding: 15px;
         font-size: 15px;
         margin: 0;
