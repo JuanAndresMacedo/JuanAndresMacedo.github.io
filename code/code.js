@@ -290,18 +290,21 @@ leftButton.addEventListener("click", function () {
 
 //--------------------------------------- Text moves towards mouse effect ------------------------------------------
 
-const nameSpans = document.querySelectorAll(".moving-span");
+const title1 = document.getElementById("title1");
+const title2 = document.getElementById("title2");
 
 aboutMeWindow.addEventListener("mousemove", function (event) {
     const mouseX = event.pageX;
     const mouseY = event.pageY;
 
-    nameSpans.forEach((nameSpan) => {
-        const xOffset = (mouseX / window.innerWidth) * 8;
-        const yOffset = (mouseY / window.innerHeight) * 8;
+    const xOffset1 = (mouseX / window.innerWidth) * 8;
+    const yOffset1 = (mouseY / window.innerHeight) * 8;
 
-        nameSpan.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
-    });
+    const xOffset2 = (mouseX / window.innerWidth) * 14;
+    const yOffset2 = (mouseY / window.innerHeight) * 14;
+
+    title1.style.transform = `translate(${xOffset1}px, ${yOffset1}px)`;
+    title2.style.transform = `translate(${xOffset2}px, ${yOffset2}px)`;
 });
 
 //------------------------------------------ Change Background --------------------------------------------
