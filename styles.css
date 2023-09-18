@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-.preloaded-images{
+.preloaded-images {
     display: none;
 }
 
@@ -149,9 +149,9 @@ header {
 #aboutMe-window {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    
+
     padding: 40px 20px 40px 20px;
     margin: 0;
     width: 100%;
@@ -163,74 +163,85 @@ header {
     overflow-y: auto;
 }
 
-#aboutMe-window > span{
-    text-align: center;
-    align-self: center;
-}
-
 .title-container {
     position: relative;
-    width: 80%;
-    height: 100px;
-    margin-bottom: 30px;
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .aboutMe-title {
     z-index: 30;
-    position: absolute;
-    margin-bottom: 40px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 42px;
+    font-size: 50px;
     text-align: center;
     align-self: center;
+
+    position: absolute;
 }
 
 #title1 {
     z-index: 20;
-    position: absolute;
     color: #ce1bad;
+    position: absolute;
+    transform: translate(4px, 4px);
 }
 
 #title2 {
     z-index: 10;
-    position: absolute;
     color: #29006b;
-    top: 5px;
+    position: absolute;
+    transform: translate(7px, 7px);
 }
 
-#aboutMe-window span {
-    margin-bottom: 20px;
+#aboutMe-window>span {
+    text-align: center;
+    align-self: center;
     font-family: 'Press Start 2P', cursive;
 }
 
 #presentation-container {
     width: 80%;
-    height: 80%;
+    height: 60%;
+
     padding: 10px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 1.25rem;
-}
 
-#roverGif {
-    height: 150px;
-    width: 150px;
+    line-height: 1.25rem;
 }
 
 .aboutMe-text-container {
     width: 40%;
-    height: auto;
+    max-height: 100%;
+
     background-color: #5a5a5a;
-    /*border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;*/
     border-radius: 15px;
     padding: 15px;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     text-align: left;
+
+    overflow: auto;
     /*transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;*/
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scroll-bar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scroll-bar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .aboutMe-text-container.open {
@@ -507,19 +518,6 @@ header {
     overflow-y: auto;
     border-radius: 3px;
     margin-bottom: 7px;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.project-description::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.project-description {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
 }
 
 #visit-button {
@@ -1052,9 +1050,16 @@ footer {
     margin-right: 5px;
 }
 
-@media (max-width:600px) {
+@media (max-width: 1260px) {
 
-    /*General changes*/
+    /*About Me Window*/
+
+    #aboutMe-window>span {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 820px) {
 
     body {
         background-color: #cc8b00;
@@ -1070,32 +1075,107 @@ footer {
         right: 0;
     }
 
-    /*General changes End*/
-
-    /*AboutMe Window Changes*/
-
+    /*About Me Window*/
     #aboutMe-window {
-        padding: 20px 10px 20px 1 0px;
+        padding: 25px;
+    }
+
+    .title-container {
+        height: 80px;
     }
 
     .aboutMe-title {
-        margin-bottom: 40px;
+        font-size: 45px;
+    }
+
+    #presentation-container {
+        width: 90%;
+        height: 60%;
+    }
+
+    .aboutMe-text-container {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    #aboutMe-button-container {
+        width: 60px;
+    }
+}
+
+@media (max-width: 615px) {
+
+    /*About Me Window*/
+    .aboutMe-title {
         font-size: 35px;
     }
 
-    .title-container{
-        margin-bottom: 100px;
+    #aboutMe-window>span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        background-color: #221f1a;
     }
 
-    #presentation-container{
+    #screen {
+        align-items: center;
+    }
+
+    #programs-window {
         width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    /*About Me Window*/
+    #aboutMe-window {
+        padding: 30px 0px 30px 0px;
+    }
+
+    #presentation-container {
+        height: 50%;
+        height: 50%;
         padding: 0;
     }
 
     .aboutMe-text-container {
-        width: 100%;
-        padding: 15px;
-        font-size: 15px;
-        margin: 0;
+        width: 60%;
+        height: 100%;
+        font-size: 12px;
     }
+
+    #aboutMe-button-container {
+        width: 40px;
+    }
+
+    #aboutMe-window>span {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 280px) {
+
+    /*About Me Window*/
+    .aboutMe-title {
+        font-size: 30px;
+        width: 80%;
+    }
+
+    #aboutMe-window>span {
+        font-size: 12px;
+    }
+
+    #aboutMe-window>span {
+        font-size: 15px;
+    }
+
+    .aboutMe-text-container {
+        width: 80%;
+        font-size: 12px;
+    }
+
 }
