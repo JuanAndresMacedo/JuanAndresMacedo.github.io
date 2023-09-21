@@ -163,10 +163,24 @@ header {
     overflow-y: auto;
 }
 
-.title-container {
+#aboutMe-header {
+    /*height: auto;*/
+    height: 30%;
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    /*background-color: #29006b;*/
+}
+
+#title-container {
     position: relative;
     width: 100%;
-    height: 20%;
+    height: auto;
 
     display: flex;
     justify-content: center;
@@ -180,7 +194,9 @@ header {
     text-align: center;
     align-self: center;
 
-    position: absolute;
+    position: relative;
+
+    /*background-color: #007e7d;*/
 }
 
 #title1 {
@@ -197,15 +213,20 @@ header {
     transform: translate(7px, 7px);
 }
 
-#aboutMe-window>span {
+#aboutMe-header p {
+    width: 100%;
+    height: auto;
+
     text-align: center;
     align-self: center;
     font-family: 'Press Start 2P', cursive;
+
+    /*background-color: #19da00;*/
 }
 
 #presentation-container {
     width: 80%;
-    height: 60%;
+    height: 55%;
 
     padding: 10px;
 
@@ -214,6 +235,8 @@ header {
     align-items: center;
 
     line-height: 1.25rem;
+
+    /*background-color: orange;*/
 }
 
 .aboutMe-text-container {
@@ -318,7 +341,8 @@ header {
 }
 
 .proyect-window-title {
-    margin: 0px 15px 8px 15px;
+    margin: 0px 15px 0px 0px;
+    width: 100%;
     font-weight: 500;
     font-size: 40px;
 }
@@ -348,10 +372,13 @@ header {
 
 .project {
     color: white;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    width: 105px;
     margin: 15px 15px 15px 15px;
     transition: all 0.3s ease;
 }
@@ -382,12 +409,13 @@ header {
 }
 
 .project-text-container {
-    max-width: 105px;
+    width: 100%;
     text-align: center;
     margin-top: auto;
     align-self: center;
     flex-grow: 1;
     padding: 5px 0;
+    overflow: auto;
 }
 
 .icon-text {
@@ -434,9 +462,13 @@ header {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 16px 20px 20px 20px;
+    padding: 2px 20px 2px 20px;
     /*arriba, derecha, abajo, izquierda*/
     color: #000;
+}
+
+#help-window-content p {
+    height: 100%;
 }
 
 #questionMarkIcon {
@@ -667,6 +699,8 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    overflow: auto;
 }
 
 @keyframes hideChildElements {
@@ -1054,8 +1088,46 @@ footer {
 
     /*About Me Window*/
 
-    #aboutMe-window>span {
-        margin-top: 20px;
+    #aboutMe-window {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .aboutMe-title {
+        font-size: 42px;
+    }
+
+    .aboutMe-text-container {
+        width: 50%;
+    }
+
+    #aboutMe-header {
+        height: 45%;
+    }
+
+    /*End About Me Window*/
+
+    #skills-window {
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 12px;
+
+        position: relative;
+    }
+
+    .skills-title {
+        font-size: 80px;
+        background-color: #000000d7;
+    }
+
+    #Stack {
+        animation: none;
+    }
+
+    #Actual {
+        animation: none;
     }
 }
 
@@ -1076,16 +1148,9 @@ footer {
     }
 
     /*About Me Window*/
-    #aboutMe-window {
-        padding: 25px;
-    }
 
-    .title-container {
-        height: 80px;
-    }
-
-    .aboutMe-title {
-        font-size: 45px;
+    #aboutMe-header p {
+        font-size: 18px;
     }
 
     #presentation-container {
@@ -1101,18 +1166,100 @@ footer {
     #aboutMe-button-container {
         width: 60px;
     }
+
+    /*End AboutMe Window*/
+
+    /*arriba derecha abajo izq*/
+
+    /*Project Window*/
+    .left-content {
+        width: 100%;
+        background: url(/img/backgrounds/space.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 5px;
+        padding-bottom: 0;
+    }
+
+    .right-content {
+        display: none;
+    }
+
+    .proyect-window-title {
+        font-weight: 500;
+        font-size: 40px;
+        margin-bottom: 5px;
+    }
+
+    #personal-projects-container {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #faculty-projects-container {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        cursor: grab;
+        overflow-x: hidden;
+        transition: all 0.2s ease;
+        /*background-color: #007e7d;*/
+        padding: 0;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 15px 0px 0px;
+    }
+
+    .project-text-container {
+        text-align: center;
+        margin-top: auto;
+        align-self: center;
+        flex-grow: 1;
+        padding: 5px 0;
+        /*background-color: #8b5401;*/
+    }
+
+    .icon-text {
+        margin-top: 5px;
+        background-color: #000;
+    }
+
+    /*End Project Window*/
 }
 
-@media (max-width: 615px) {
+@media (max-width: 620px) {
 
     /*About Me Window*/
+    #aboutMe-window {
+        padding: 30px;
+    }
+
     .aboutMe-title {
         font-size: 35px;
     }
 
-    #aboutMe-window>span {
-        font-size: 15px;
+    #aboutMe-header p {
+        margin-top: 4%;
+        font-size: 16px;
     }
+}
+
+@media(max-width: 525px) {
+
 }
 
 @media (max-width: 480px) {
@@ -1132,9 +1279,9 @@ footer {
     }
 
     /*About Me Window*/
-    #aboutMe-window {
+    /*#aboutMe-window {
         padding: 30px 0px 30px 0px;
-    }
+    }*/
 
     #presentation-container {
         height: 50%;
@@ -1144,7 +1291,7 @@ footer {
 
     .aboutMe-text-container {
         width: 60%;
-        height: 100%;
+        height: auto;
         font-size: 12px;
     }
 
@@ -1152,25 +1299,25 @@ footer {
         width: 40px;
     }
 
-    #aboutMe-window>span {
-        margin-top: 0px;
+    /*End AboutMe Window*/
+
+    /*Project Window*/
+    .proyect-window-title {
+        font-size: 30px;
     }
+
+    /*End Project Window*/
 }
 
 @media (max-width: 280px) {
 
     /*About Me Window*/
     .aboutMe-title {
-        font-size: 30px;
-        width: 80%;
+        font-size: 28px;
     }
 
-    #aboutMe-window>span {
-        font-size: 12px;
-    }
-
-    #aboutMe-window>span {
-        font-size: 15px;
+    #aboutMe-header p {
+        font-size: 13px;
     }
 
     .aboutMe-text-container {
