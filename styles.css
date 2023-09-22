@@ -174,7 +174,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    /*background-color: #29006b;*/
+    background-color: #29006b;
 }
 
 #title-container {
@@ -196,7 +196,7 @@ header {
 
     position: relative;
 
-    /*background-color: #007e7d;*/
+    background-color: #007e7d;
 }
 
 #title1 {
@@ -221,11 +221,11 @@ header {
     align-self: center;
     font-family: 'Press Start 2P', cursive;
 
-    /*background-color: #19da00;*/
+    background-color: #19da00;
 }
 
 #presentation-container {
-    width: 80%;
+    width: 100%;
     height: 55%;
 
     padding: 10px;
@@ -236,7 +236,7 @@ header {
 
     line-height: 1.25rem;
 
-    /*background-color: orange;*/
+    background-color: orange; 
 }
 
 .aboutMe-text-container {
@@ -1084,7 +1084,7 @@ footer {
     margin-right: 5px;
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1278px) {
 
     /*About Me Window*/
 
@@ -1093,16 +1093,12 @@ footer {
         padding-bottom: 30px;
     }
 
-    .aboutMe-title {
-        font-size: 42px;
+    #aboutMe-header {
+        height: 35%;
     }
 
     .aboutMe-text-container {
         width: 50%;
-    }
-
-    #aboutMe-header {
-        height: 45%;
     }
 
     /*End About Me Window*/
@@ -1241,7 +1237,7 @@ footer {
     /*End Project Window*/
 }
 
-@media (max-width: 620px) {
+@media (max-width: 685px) {
 
     /*About Me Window*/
     #aboutMe-window {
@@ -1249,7 +1245,11 @@ footer {
     }
 
     .aboutMe-title {
-        font-size: 35px;
+        font-size: 40px;
+    }
+
+    #aboutMe-header {
+        height: 30%;
     }
 
     #aboutMe-header p {
@@ -1258,8 +1258,10 @@ footer {
     }
 }
 
-@media(max-width: 525px) {
-
+@media(max-width: 585px) {
+    #aboutMe-header {
+        height: 38%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1309,15 +1311,15 @@ footer {
     /*End Project Window*/
 }
 
-@media (max-width: 280px) {
+@media (max-width: 350px) {
 
     /*About Me Window*/
     .aboutMe-title {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     #aboutMe-header p {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .aboutMe-text-container {
