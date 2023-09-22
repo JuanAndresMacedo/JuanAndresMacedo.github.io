@@ -174,7 +174,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    background-color: #29006b;
+    /*background-color: #29006b;*/
 }
 
 #title-container {
@@ -196,7 +196,7 @@ header {
 
     position: relative;
 
-    background-color: #007e7d;
+    /*background-color: #007e7d;*/
 }
 
 #title1 {
@@ -221,7 +221,7 @@ header {
     align-self: center;
     font-family: 'Press Start 2P', cursive;
 
-    background-color: #19da00;
+    /*background-color: #19da00;*/
 }
 
 #presentation-container {
@@ -236,7 +236,7 @@ header {
 
     line-height: 1.25rem;
 
-    background-color: orange; 
+    /*background-color: orange; */
 }
 
 .aboutMe-text-container {
