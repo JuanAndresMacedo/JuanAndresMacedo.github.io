@@ -147,7 +147,7 @@ header {
 /*--- About Me Window ---*/
 
 #aboutMe-window {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -328,7 +328,7 @@ header {
 #project-window {
     margin: 0;
     padding: 0;
-    display: none;
+    display: flex;
     width: 100%;
 }
 
@@ -348,6 +348,9 @@ header {
     height: 20%;
     font-weight: 500;
     font-size: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
     /*background-color: rgb(151, 0, 0);*/
 }
@@ -382,6 +385,7 @@ header {
 
     overflow-x: hidden;
     transition: all 0.2s ease;
+
     /*background-color: #007e7d;*/
 }
 
@@ -482,7 +486,7 @@ header {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 2px 20px 2px 20px;
+    padding: 4px 20px 4px 20px;
     /*arriba, derecha, abajo, izquierda*/
     color: #000;
 }
@@ -1104,7 +1108,7 @@ footer {
     margin-right: 5px;
 }
 
-@media (max-width: 1278px) {
+@media (max-width: 1280px) {
 
     /*About Me Window*/
 
@@ -1119,6 +1123,10 @@ footer {
 
     .aboutMe-text-container {
         width: 50%;
+    }
+
+    .proyect-window-title {
+        margin-bottom: 15px;
     }
 
     /*End About Me Window*/
@@ -1185,16 +1193,12 @@ footer {
 
     /*End AboutMe Window*/
 
-    /*arriba derecha abajo izq*/
-
     /*Project Window*/
-    /*.left-content {
+    .left-content {
         width: 100%;
         background: url(/img/backgrounds/space.webp);
         background-size: cover;
         background-repeat: no-repeat;
-        padding-top: 5px;
-        padding-bottom: 0;
     }
 
     .right-content {
@@ -1202,55 +1206,12 @@ footer {
     }
 
     .proyect-window-title {
-        font-weight: 500;
-        font-size: 40px;
-        margin-bottom: 5px;
+        margin-bottom: 0px;
     }
 
-    #personal-projects-container {
-        width: 100%;
-        height: 50%;
-        display: flex;
-        flex-direction: column;
+    .icon-text-project {
+        background-color: black;
     }
-
-    #faculty-projects-container {
-        width: 100%;
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .projects-container {
-        width: 100%;
-        height: auto;
-        display: flex;
-        cursor: grab;
-        overflow-x: hidden;
-        transition: all 0.2s ease;
-        padding: 0;
-    }
-
-    .project {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0px 15px 0px 0px;
-    }
-
-    .project-text-container {
-        text-align: center;
-        margin-top: auto;
-        align-self: center;
-        flex-grow: 1;
-        padding: 5px 0;
-    }
-
-    .icon-text {
-        margin-top: 5px;
-        background-color: #000;
-    }*/
 
     /*End Project Window*/
 }
@@ -1304,8 +1265,8 @@ footer {
         height: 40%;
     }
 
-    
-    #aboutMe-header p{
+
+    #aboutMe-header p {
         font-size: 14px;
     }
 
@@ -1327,13 +1288,14 @@ footer {
     }
 
     /*End AboutMe Window*/
+}
+
+@media (max-width: 375px) {
 
     /*Project Window*/
     .proyect-window-title {
-        font-size: 30px;
+        font-size: 35px;
     }
-
-    /*End Project Window*/
 }
 
 @media (max-width: 350px) {
@@ -1343,7 +1305,7 @@ footer {
         font-size: 32px;
     }
 
-    #aboutMe-header{
+    #aboutMe-header {
         height: 38%;
     }
 
@@ -1355,5 +1317,12 @@ footer {
         width: 80%;
         font-size: 12px;
     }
+
+    /*Project Window*/
+    .proyect-window-title {
+        font-size: 28px;
+    }
+
+    /*End Project Window*/
 
 }
