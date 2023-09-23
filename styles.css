@@ -89,13 +89,17 @@ header {
     }
 }
 
-/* /-> --- Interactive Window ---*/
+/*--- Interactive Window ---*/
+
 #programs-window {
     color: white;
     background-color: silver;
+
+    position: absolute;
+
     height: 80%;
     width: 85%;
-    position: absolute;
+
     left: 10vw;
     right: 10vw;
     z-index: 2;
@@ -328,7 +332,7 @@ header {
 #project-window {
     margin: 0;
     padding: 0;
-    display: none;
+    display: flex;
     width: 100%;
 }
 
@@ -341,6 +345,25 @@ header {
     display: flex;
     flex-direction: column;
 }
+
+/*--- Mobile Project Information Window ---*/
+
+#mobile-project-information-window {
+    width: 100%;
+    height: 100%;
+    background-color: silver;
+    display: none;
+}
+
+#mobile-project-information-window.open {
+    animation: slideInProject 0.4s ease-in-out;
+}
+
+#mobile-project-information-window.hidden {
+    animation: slideOutProject 0.4s ease-in-out;
+}
+
+/*--- Mobile Project Information Window End ---*/
 
 .proyect-window-title {
     margin: 0px 15px 0px 0px;
@@ -598,7 +621,7 @@ header {
     height: auto;
     background: url("img/backgrounds/starryNight.webp");
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -612,7 +635,7 @@ header {
     background-color: #000000d7;
 }
 
-#mobile-skills-title{
+#mobile-skills-title {
     display: none;
 }
 
@@ -853,12 +876,15 @@ header {
 /* /-> --- Top Bar ---*/
 .top-bar {
     background-color: rgb(2, 2, 145);
-    display: flex;
-    width: auto;
+
+    width: 99.5%;
     height: 25px;
+
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+
     z-index: 10;
     margin: 2px;
     padding: 2px 2px 2px 2px;
@@ -1240,7 +1266,7 @@ footer {
         padding-top: 20px;
     }
 
-    #mobile-skills-title{
+    #mobile-skills-title {
         display: flex;
         font-size: 70px;
     }
@@ -1255,7 +1281,7 @@ footer {
         animation: none;
     }
 
-    #computer{
+    #computer {
         width: 80%;
     }
 }
@@ -1322,15 +1348,15 @@ footer {
 
     /*Skills*/
 
-    #mobile-skills-title{
+    #mobile-skills-title {
         font-size: 55px;
     }
 
-    #computer{
+    #computer {
         width: 99%;
     }
 
-    #computerScreen{
+    #computerScreen {
         font-size: 12px;
     }
 }
@@ -1363,7 +1389,7 @@ footer {
     /*End Project Window*/
 
     /*Skills*/
-    #mobile-skills-title{
+    #mobile-skills-title {
         font-size: 50px;
     }
 

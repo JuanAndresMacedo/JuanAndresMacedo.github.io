@@ -13,6 +13,7 @@ const projectWindow = document.getElementById("project-window");
 const aboutMeWindow = document.getElementById("aboutMe-window");
 const helpWindow = document.getElementById("help-window");
 const projectInformationWindow = document.getElementById("project-information-window");
+const mobileProjectInformationWindow = document.getElementById("mobile-project-information-window");
 
 //------ Containers --------
 const iconContainers = document.querySelectorAll(".icon-container");
@@ -29,6 +30,9 @@ const programsWindowTopBarName = document.getElementById("programs-window-topBar
 const projectContainerTopBarIcon = document.getElementById("project-topBar-icon");
 const projectContainerTopBarName = document.getElementById("project-topBar-name");
 
+const mobileProjectContainerTopBarIcon = document.getElementById("mobile-project-topBar-icon");
+const mobileProjectContainerTopBarName = document.getElementById("mobile-project-topBar-name");
+
 //------- Buttons --------
 const minimizeButton = document.getElementById("minimize-button");
 
@@ -36,6 +40,7 @@ const minimizeButton = document.getElementById("minimize-button");
 const closeButton = document.getElementById("close-button");
 const helpCloseButton = document.getElementById("help-close-button");
 const projectCloseButton = document.getElementById("project-close-button");
+const mobileProjectCloseButton = document.getElementById("mobile-project-close-button");
 
 //------- Icons --------
 const backgroundChange = document.getElementById("landscapeIcon");
@@ -46,8 +51,17 @@ const footer = document.getElementById("footer");
 //------------------------------------ Functions ------------------------------------------------------------
 
 //PRE: -
+//POS: Close every content window
+function closeContentWindows() {
+    windows.forEach(window => {
+        window.style.display = "none";
+    });
+}
+
+//PRE: -
 //POS: Show the selected content window
 function showContentWindow(id) {
+    programsWindow.style.display = "none";
     closeContentWindows();
     const windowToShow = document.getElementById(id);
     windowToShow.style.display = "flex";
@@ -56,9 +70,18 @@ function showContentWindow(id) {
 
 function showProjectWindow(id) {
     closeProjectWindows();
-    const windowToShow = document.getElementById(id);
-    windowToShow.style.display = "flex";
-    projectInformationWindow.style.display = "block";
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth <= 820) {
+        const windowToShow = document.getElementById("mobile-" + id);
+        windowToShow.style.display = "flex";
+        mobileProjectInformationWindow.style.display = "block";
+        closeContentWindows();
+    } else {
+        const windowToShow = document.getElementById(id);
+        windowToShow.style.display = "flex";
+        projectInformationWindow.style.display = "block";
+    }
 }
 
 //PRE: -
@@ -84,6 +107,7 @@ function showOpenProgram(programId, windowId, src, text) {
         newOpenProgram.appendChild(newProgramText);
 
         newOpenProgram.addEventListener('click', () => {
+            programsWindow.style.display = "none";
             closeContentWindows();
             fillTopBar(programsWindowTopBarIcon, programsWindowTopBarName, src, text);
             programsWindow.setAttribute("data-target", programId);
@@ -98,19 +122,19 @@ function showOpenProgram(programId, windowId, src, text) {
 
 //PRE: -
 //POS: Close every content window
-function closeContentWindows() {
-    windows.forEach(window => {
-        window.style.display = "none";
-    });
-}
-
-//PRE: -
-//POS: Close every content window
 function closeProjectWindows() {
     projectContainers.forEach(projectContainer => {
         projectContainer.style.display = "none"
     });
-    projectInformationWindow.style.display = "none";
+
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth <= 820) {
+        projectWindow.style.display = "flex";
+        mobileProjectInformationWindow.style.display = "none";
+    } else {
+        projectInformationWindow.style.display = "none";
+    }
 }
 
 //PRE: -
@@ -201,6 +225,7 @@ minimizeButton.addEventListener("click", function () {
     programsWindow.classList.add('hidden');
     setTimeout(() => {
         putSlideInAnimation(programsWindow);
+        programsWindow.style.display = "none";
         closeContentWindows();
     }, 385);
 });
@@ -215,6 +240,7 @@ closeButton.addEventListener("click", function () {
         putSlideInAnimation(programsWindow);
         putSlideInAnimation(openProgram);
         closeMinimizedOpenProgram(programsWindow.getAttribute("data-target"));
+        programsWindow.style.display = "none";
         closeContentWindows();
     }, 385);
 });
@@ -235,6 +261,14 @@ projectCloseButton.addEventListener("click", function () {
     projectInformationWindow.classList.add('hidden');
     setTimeout(() => {
         putSlideInAnimation(projectInformationWindow);
+        closeProjectWindows();
+    }, 385);
+});
+
+mobileProjectCloseButton.addEventListener("click", function () {
+    mobileProjectInformationWindow.classList.add('hidden');
+    setTimeout(() => {
+        putSlideInAnimation(mobileProjectInformationWindow);
         closeProjectWindows();
     }, 385);
 });
@@ -355,7 +389,7 @@ sliders.forEach(slider => {
     });
 });
 
-//------------------------------------ Open Content Windows ------------------------------------------------------
+//------------------------------------ Open Project Inforamtion Window ------------------------------------------------------
 
 projects.forEach(project => {
     project.addEventListener("click", () => {
@@ -364,7 +398,15 @@ projects.forEach(project => {
         const topBarIcon = project.getAttribute("data-src");
 
         helpWindow.style.display = "none";
-        fillTopBar(projectContainerTopBarIcon, projectContainerTopBarName, topBarIcon, topBarName);
+
+        const windowWidth = window.innerWidth;
+
+        if (windowWidth <= 820) {
+            fillTopBar(mobileProjectContainerTopBarIcon, mobileProjectContainerTopBarName, topBarIcon, topBarName);
+        } else {
+            fillTopBar(projectContainerTopBarIcon, projectContainerTopBarName, topBarIcon, topBarName);
+        }
+
         showProjectWindow(windowToOpen);
     });
 });
