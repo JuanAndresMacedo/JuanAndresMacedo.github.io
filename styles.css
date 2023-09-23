@@ -486,7 +486,7 @@ header {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 4px 20px 4px 20px;
+    padding: 10px 20px 10px 20px;
     /*arriba, derecha, abajo, izquierda*/
     color: #000;
 }
@@ -1131,6 +1131,12 @@ footer {
 
     /*End About Me Window*/
 
+    /*Project Window*/
+    #help-window-content p {
+        font-size: 18px;
+    }
+
+    /*Skills*/
     #skills-window {
         display: none;
         flex-direction: column;
