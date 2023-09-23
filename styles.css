@@ -328,7 +328,7 @@ header {
 #project-window {
     margin: 0;
     padding: 0;
-    display: flex;
+    display: none;
     width: 100%;
 }
 
@@ -598,7 +598,7 @@ header {
     height: auto;
     background: url("img/backgrounds/starryNight.webp");
 
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -610,6 +610,10 @@ header {
 .skills-title {
     font-size: 80px;
     background-color: #000000d7;
+}
+
+#mobile-skills-title{
+    display: none;
 }
 
 #Stack {
@@ -1137,27 +1141,9 @@ footer {
     }
 
     /*Skills*/
-    #skills-window {
-        display: none;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 12px;
-
-        position: relative;
-    }
 
     .skills-title {
-        font-size: 80px;
-        background-color: #000000d7;
-    }
-
-    #Stack {
-        animation: none;
-    }
-
-    #Actual {
-        animation: none;
+        font-size: 62px;
     }
 }
 
@@ -1220,6 +1206,12 @@ footer {
     }
 
     /*End Project Window*/
+
+    /*Skills*/
+
+    .skills-title {
+        font-size: 60px;
+    }
 }
 
 @media (max-width: 685px) {
@@ -1240,6 +1232,31 @@ footer {
     #aboutMe-header p {
         margin-top: 4%;
         font-size: 16px;
+    }
+
+    /*Skills*/
+    #skills-window {
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    #mobile-skills-title{
+        display: flex;
+        font-size: 70px;
+    }
+
+    #Stack {
+        display: none;
+        animation: none;
+    }
+
+    #Actual {
+        display: none;
+        animation: none;
+    }
+
+    #computer{
+        width: 80%;
     }
 }
 
@@ -1302,6 +1319,20 @@ footer {
     .proyect-window-title {
         font-size: 35px;
     }
+
+    /*Skills*/
+
+    #mobile-skills-title{
+        font-size: 55px;
+    }
+
+    #computer{
+        width: 99%;
+    }
+
+    #computerScreen{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 350px) {
@@ -1330,5 +1361,10 @@ footer {
     }
 
     /*End Project Window*/
+
+    /*Skills*/
+    #mobile-skills-title{
+        font-size: 50px;
+    }
 
 }
