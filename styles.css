@@ -568,7 +568,7 @@ header {
     height: calc(100% - 26px);
     display: none;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
     padding: 5px 16px 8px 15px;
     /*arriba, derecha, abajo, izquierda*/
@@ -582,9 +582,6 @@ header {
 .projectImage {
     width: 100%;
     height: 65%;
-    /*background: url(img/projects/captura1.PNG);
-    background-size: cover;
-    background-repeat: no-repeat;*/
     margin-bottom: 10px;
 }
 
@@ -1293,6 +1290,14 @@ footer {
     #aboutMe-header {
         height: 38%;
     }
+
+    .projectImage {
+        height: 50%;
+    }
+
+    .project-description {
+        height: 40%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1340,6 +1345,14 @@ footer {
     }
 
     /*End AboutMe Window*/
+
+    .projectImage {
+        height: 45%;
+    }
+
+    .project-description {
+        height: 40%;
+    }
 }
 
 @media (max-width: 385px) {
