@@ -168,30 +168,6 @@ function fillContentWindow(id) {
     }
 }
 
-function changeArrayTextDependingOnWindowWidth() {
-    const windowWidth = window.innerWidth;
-
-    if (windowWidth < 600) {
-        arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
-            "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí.";
-        arrayText[1] = "Aquí están mis intereses personales, para fines profesionales puedes estar interesado en mi" +
-            "trabajo o mis habilidades."
-        arrayText[2] = "Como puedes ver, soy amante de la tecnología y algo nostálgico, " +
-            "¡a veces mi trabajo se convierte en un pasatiempo! Supongo que puedes notar mi interés por el estilo retro, " +
-            "la animación, el arte pixelado, los videojuegos y la estética vaporwave.";
-        arrayText[3] = "hola";
-    } else {
-        arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
-            "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí." +
-            "<br><br>Aquí están mis intereses personales, para fines profesionales puedes estar interesado en mi" +
-            "trabajo o mis habilidades.";
-        arrayText[1] = "Como puedes ver, soy amante de la tecnología y algo nostálgico, " +
-            "¡a veces mi trabajo se convierte en un pasatiempo! Supongo que puedes notar mi interés por el estilo retro, " +
-            "la animación, el arte pixelado, los videojuegos y la estética vaporwave.";
-        arrayText[2] = "hola";
-    }
-}
-
 function putSlideInAnimation(window) {
     window.classList.remove('hidden');
     window.classList.add('open');
@@ -281,16 +257,33 @@ const aboutMeText = document.getElementById("aboutMe-text-container");
 
 let index = 0;
 const arrayText = [];
-arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
-    "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí." +
-    "<br><br>Aquí están mis intereses personales, para fines profesionales puedes estar interesado en mi" +
-    "trabajo o mis habilidades.";
 
-arrayText[1] = "Como puedes ver, soy amante de la tecnología y algo nostálgico, " +
-    "¡a veces mi trabajo se convierte en un pasatiempo! Supongo que puedes notar mi interés por el estilo retro, " +
-    "la animación, el arte pixelado, los videojuegos y la estética vaporwave.";
+function changeArrayTextDependingOnWindowWidth() {
+    const windowWidth = window.innerWidth;
 
-arrayText[2] = "hola";
+    if (windowWidth < 600) {
+        arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
+            "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí.";
+
+        arrayText[1] = "En esta sección, comparto mis intereses personales, pero si estás buscando información relevante " +
+            "para fines profesionales, te invito a explorar la sección de proyectos y habilidades.";
+
+        arrayText[2] = "Como podrás notar, soy un amante de la tecnología. En ocasiones, mi trabajo se convierte en un pasatiempo, " +
+            "fusionando mis intereses personales con mis proyectos profesionales.<br><br>Además, mis intereses abarcan campos tan diversos " +
+            "como la astronomía  &#10024 , la biología &#x1F331 y, por supuesto, los videojuegos &#x1F47E;.";
+
+    } else {
+
+        arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
+            "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí." +
+            "<br><br>En esta sección, comparto mis intereses personales, pero si estás buscando información relevante " +
+            "para fines profesionales, te invito a explorar la sección de proyectos y habilidades.";
+
+            arrayText[2] = "Como podrás notar, soy un amante de la tecnología. En ocasiones, mi trabajo se convierte en un pasatiempo, " +
+            "fusionando mis intereses personales con mis proyectos profesionales.<br><br>Además, mis intereses abarcan campos tan diversos " +
+            "como la astronomía  &#10024 , la biología &#x1F331 y, por supuesto, los videojuegos &#x1F47E;.";
+    }
+}
 
 function applySlideInAboutMeTextAnimation() {
     aboutMeText.classList.remove("open");
@@ -433,15 +426,14 @@ const greenLight = document.getElementById("greenLight");
 const redLight = document.getElementById("redLight");
 
 startComputerButton.addEventListener("click", () => {
-    const state = computerScreen.className;
+    const state = computerScreen.getAttribute("data-state");
 
     if (state == "on") {
         for (var i = 0; i < hijos.length; i++) {
             hijos[i].style.animation = "hideChildElements 0.5s forwards";
         }
 
-        computerScreen.classList.remove("on");
-        computerScreen.classList.add("off");
+        computerScreen.setAttribute("data-state", "off");
 
         greenLight.style.animation = "none";
         greenLight.offsetHeight;
@@ -453,8 +445,7 @@ startComputerButton.addEventListener("click", () => {
             hijos[i].style.animation = "showChildElements 0.5s forwards";
         }
 
-        computerScreen.classList.remove("off");
-        computerScreen.classList.add("on");
+        computerScreen.setAttribute("data-state", "on");
 
         redLight.style.backgroundColor = "rgb(83, 54, 54)";
         greenLight.style.animation = "blink 2.5s infinite ease-out";
