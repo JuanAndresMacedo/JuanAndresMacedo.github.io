@@ -375,6 +375,7 @@ header {
     justify-content: flex-start;
     align-items: center;
 
+    padding-left: 10px;
     /*background-color: rgb(151, 0, 0);*/
 }
 
@@ -383,7 +384,6 @@ header {
     height: 50%;
     display: flex;
     flex-direction: column;
-
     /*background-color: #29006b;*/
 }
 
@@ -408,6 +408,8 @@ header {
 
     overflow-x: hidden;
     transition: all 0.2s ease;
+
+    padding-left: 10px;
 
     /*background-color: #007e7d;*/
 }
@@ -1340,7 +1342,7 @@ footer {
     /*End AboutMe Window*/
 }
 
-@media (max-width: 375px) {
+@media (max-width: 385px) {
 
     /*Project Window*/
     .proyect-window-title {
@@ -1384,7 +1386,7 @@ footer {
 
     /*Project Window*/
     .proyect-window-title {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     /*End Project Window*/
