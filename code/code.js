@@ -340,6 +340,11 @@ aboutMeWindow.addEventListener("mousemove", function (event) {
 //POS: Change the background to an image or color
 backgroundChange.addEventListener("click", function () {
     document.body.style.backgroundImage = "url(img/backgrounds/background.webp)";
+
+    const iconTexts = document.querySelectorAll(".icon-text");
+    iconTexts.forEach(text => {
+        text.style.backgroundColor = "rgb(2, 2, 145)";
+    });
 });
 
 //--------------------------------------- Horizontal Slide ------------------------------------------

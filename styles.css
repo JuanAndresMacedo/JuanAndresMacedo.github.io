@@ -1176,10 +1176,6 @@ footer {
 
 @media (max-width: 820px) {
 
-    body {
-        /*background-color: #cc8b00;*/
-    }
-
     #screen {
         align-items: center;
     }
@@ -1302,11 +1298,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-
-    body {
-        /*background-color: #221f1a;*/
-    }
-
     /*About Me Window*/
 
     #aboutMe-header {
