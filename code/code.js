@@ -279,7 +279,7 @@ function changeArrayTextDependingOnWindowWidth() {
             "<br><br>En esta sección, comparto mis intereses personales, pero si estás buscando información relevante " +
             "para fines profesionales, te invito a explorar la sección de proyectos y habilidades.";
 
-            arrayText[2] = "Como podrás notar, soy un amante de la tecnología. En ocasiones, mi trabajo se convierte en un pasatiempo, " +
+            arrayText[1] = "Como podrás notar, soy un amante de la tecnología. En ocasiones, mi trabajo se convierte en un pasatiempo, " +
             "fusionando mis intereses personales con mis proyectos profesionales.<br><br>Además, mis intereses abarcan campos tan diversos " +
             "como la astronomía  &#10024 , la biología &#x1F331 y, por supuesto, los videojuegos &#x1F47E;.";
     }
