@@ -43,7 +43,7 @@ const projectCloseButton = document.getElementById("project-close-button");
 const mobileProjectCloseButton = document.getElementById("mobile-project-close-button");
 
 //------- Icons --------
-const backgroundChange = document.getElementById("landscapeIcon");
+const backgroundChange = document.getElementById("landscape-container");
 
 //Footer
 const footer = document.getElementById("footer");
@@ -339,12 +339,28 @@ aboutMeWindow.addEventListener("mousemove", function (event) {
 //PRE: -
 //POS: Change the background to an image or color
 backgroundChange.addEventListener("click", function () {
-    document.body.style.backgroundImage = "url(img/backgrounds/background.webp)";
-
+    const state = backgroundChange.getAttribute("data-state");
     const iconTexts = document.querySelectorAll(".icon-text");
-    iconTexts.forEach(text => {
-        text.style.backgroundColor = "rgb(2, 2, 145)";
-    });
+
+    if(state == "off"){
+        document.body.style.backgroundImage = "url(img/backgrounds/background.webp)";
+
+        iconTexts.forEach(text => {
+            text.style.backgroundColor = "rgb(2, 2, 145)";
+        });
+
+        backgroundChange.setAttribute("data-state", "on");
+
+    }else{
+        document.body.style.backgroundColor = "#007e7d";
+        document.body.style.backgroundImage = "none";
+
+        iconTexts.forEach(text => {
+            text.style.backgroundColor = "transparent";
+        });
+
+        backgroundChange.setAttribute("data-state", "off");
+    }
 });
 
 //--------------------------------------- Horizontal Slide ------------------------------------------
