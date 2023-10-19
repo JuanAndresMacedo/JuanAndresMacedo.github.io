@@ -529,8 +529,7 @@ header {
 /* Project Information Window */
 
 #project-information-window {
-    /*width: 95%;*/
-    width: 90%;
+    width: 85%;
     height: 95%;
     background-color: silver;
     display: none;
