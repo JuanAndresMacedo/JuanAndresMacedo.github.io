@@ -1233,6 +1233,7 @@ footer {
     }
 
     .icon-text-project {
+        padding: 1px;
         background-color: black;
     }
 
