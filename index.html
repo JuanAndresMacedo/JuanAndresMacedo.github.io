@@ -186,8 +186,8 @@
                             <div id="help-window-content">
                                 <img id="questionMarkIcon" class="icon" src="img/icons/questionMark.png"
                                     alt="Question Mark Icon">
-                                <p>Haz clic en un proyecto para ver los detalles del mismo. Puedes navegar por los
-                                    elementos arrastrando el mouse.</p>
+                                <span>Haz clic en un proyecto para ver los detalles del mismo. Puedes navegar por los
+                                    elementos arrastrando el mouse.</span>
                             </div>
                         </div>
 
@@ -351,24 +351,34 @@
                     <p id="Actual" class="skills-title">Actual</p>
                     <div id="computer">
                         <div id="computerScreen" class="hide-scroll-bar" data-state="on">
-                            <p> Mi conjunto actual de tecnologías representa mi base sólida de habilidades y mi área de
+                            <p id="computerDescription"> Mi conjunto actual de tecnologías representa mi base sólida de habilidades y mi área de
                                 enfoque actual. Estas son las tecnologías y herramientas con las que me siento más
                                 cómodo y en las que
                                 estoy trabajando para especializarme aún más.
                             </p>
-                            <div id="technologies">
-                                <div class="technology">Html</div>
-                                <div class="technology">Css</div>
-                                <div class="technology">JavaScript</div>
-                                <div class="technology">Java</div>
-                                <div class="technology">C#</div>
-                                <div class="technology">C++</div>
-                                <div class="technology">SQL</div>
-                                <div class="technology">Git</div>
-                                <div class="technology">Jest</div>
-                                <div class="technology">Bootstrap</div>
-                                <div class="technology">.Net</div>
-                                <div class="technology">NodeJs</div>
+                            <div id="technologies-container">
+                                <div id="frontEnd">
+                                    <p>Front-End</p>
+                                    <div class="technologies">
+                                        <div class="technology">Html</div>
+                                        <div class="technology">Css</div>
+                                        <div class="technology">JavaScript</div>
+                                        <div class="technology">Bootstrap</div>
+                                        <div class="technology">.Net</div>
+                                        <div class="technology">Git</div>
+                                    </div>
+                                </div>
+                                <div id="backEnd">
+                                    <p>Back-End</p>
+                                    <div class="technologies">
+                                        <div class="technology">Java</div>
+                                        <div class="technology">C#</div>
+                                        <div class="technology">C++</div>
+                                        <div class="technology">SQL</div>
+                                        <div class="technology">NodeJs</div>
+                                        <div class="technology">Jest</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div id="start">
@@ -400,7 +410,8 @@
                         </div>
                         <div class="project-description hide-scroll-bar">
                             <p>
-                                <strong>HomeCanteen</strong> es una plataforma diseñada específicamente para cantinas
+                                <strong>HomeCanteen</strong> es una plataforma diseñada específicamente para
+                                cantinas
                                 escolares, que revoluciona la forma en que los padres gestionan los pedidos y
                                 supervisan el consumo de sus hijos en el entorno escolar. Con una interfaz
                                 amigable y una amplia variedad de opciones de menú de la cantina, HomeCanteen
@@ -414,7 +425,8 @@
                                 elicitación
                                 (entrevistas, encuestas, referencias de la web). Dichos requerimientos debieron ser
                                 priorizados
-                                debido al tiempo acotado del que se disponia para el desarrollo de la aplicación. A su
+                                debido al tiempo acotado del que se disponia para el desarrollo de la aplicación. A
+                                su
                                 vez, fueron
                                 utilizadas herramientas nuevas como bootstrap, node.js y jest.
                                 <br><br>
@@ -508,10 +520,13 @@
                                 personal cada mes, porque se tiene un asistente inteligente que lo hace por ti.
                                 <br><br>
                                 <strong>Desafíos:</strong> Aplicación desarrollada en equipo de tres estudiantes.
-                                El proyecto fue desarrollado en su totalidad utilizando la metodología TDD, realizando
-                                los test antes de modelar cada clase. También se realizó un diseño UML previo en busca
+                                El proyecto fue desarrollado en su totalidad utilizando la metodología TDD,
+                                realizando
+                                los test antes de modelar cada clase. También se realizó un diseño UML previo en
+                                busca
                                 de
-                                una modularización de la solución, generando paquetes como dominio, lógica y memoria.
+                                una modularización de la solución, generando paquetes como dominio, lógica y
+                                memoria.
                                 En un futuro el paquete memoria será reemplazado por una base de datos.
                                 Fueron utilizadas herramientas nuevas como Blazor y .Net.
                                 <br><br>

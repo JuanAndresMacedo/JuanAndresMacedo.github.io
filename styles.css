@@ -11,12 +11,13 @@
 }
 
 :root {
-    --ff-roboto:'Roboto', sans-serif;
+    --ff-roboto: 'Roboto', sans-serif;
     --ff-pixel: 'Press Start 2P', cursive;
+    --ff-spaceComputer: 'Space Mono', monospace;
 
     --fs-body: clamp(12px, 1.1vw, 30px);
-    --fs-abtMeTitle : clamp(25px, 3.4vw, 100px);
-    --fs-abtMeP : clamp(12px, 1.5vw, 40px);
+    --fs-abtMeTitle: clamp(25px, 3.4vw, 100px);
+    --fs-abtMeP: clamp(12px, 1.5vw, 40px);
 }
 
 body {
@@ -218,7 +219,7 @@ header {
 
     font-family: var(--ff-pixel);
     font-size: var(--fs-abtMeTitle);
-    
+
     text-align: center;
     align-self: center;
 
@@ -266,8 +267,6 @@ header {
     justify-content: center;
     align-items: center;
 
-    line-height: 1.25rem;
-
     /*background-color: orange;*/
 }
 
@@ -278,6 +277,8 @@ header {
     background-color: #5a5a5a;
     border-radius: 15px;
     padding: 15px;
+
+    line-height: clamp(20px, 2.0vw, 50px);
 
     font-size: var(--fs-body);
     font-family: var(--ff-roboto);
@@ -534,17 +535,20 @@ header {
 #help-window-content {
     width: 100%;
     height: calc(100% - 26px);
+
+    color: #000;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px 20px 10px 20px;
+    padding: 5px 20px 10px 20px;
     /*arriba, derecha, abajo, izquierda*/
-    color: #000;
 }
 
 #help-window-content p {
     height: 100%;
+    font-size: var(--fs-body);
 }
 
 #questionMarkIcon {
@@ -748,8 +752,8 @@ header {
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
 
-    font-family: 'Space Mono', monospace;
-    font-size: 14px;
+    font-family: var(--ff-spaceComputer);
+    font-size: var(--fs-body);
     font-weight: 700;
 }
 
@@ -761,10 +765,6 @@ header {
     to {
         opacity: 1;
     }
-}
-
-#computer p {
-    margin-bottom: 30px;
 }
 
 #computerScreen {
@@ -787,7 +787,7 @@ header {
     justify-content: flex-start;
     align-items: center;
 
-    overflow: auto;
+    overflow-y: auto;
 }
 
 @keyframes hideChildElements {
@@ -810,15 +810,54 @@ header {
     }
 }
 
-#technologies {
-    /*width: 65%;*/
+#computerDescription {
+    margin-bottom: 30px;
+}
+
+#technologies-container {
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#technologies-container p {
+    font-size: var(--fs-body);
+    font-family: var(--ff-pixel);
+    margin-bottom: 5%;
+}
+
+#frontEnd {
+    height: auto;
+    width: 50%;
+
+    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: white;
+}
+
+#backEnd {
+    height: auto;
+    width: 50%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.technologies {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .technology {
