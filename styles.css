@@ -10,12 +10,35 @@
     display: none;
 }
 
+:root {
+    --ff-roboto:'Roboto', sans-serif;
+    --ff-pixel: 'Press Start 2P', cursive;
+
+    --fs-body: clamp(12px, 1.1vw, 30px);
+    --fs-abtMeTitle : clamp(25px, 3.4vw, 100px);
+    --fs-abtMeP : clamp(12px, 1.5vw, 40px);
+}
+
 body {
     font-family: 'VT323', monospace;
     background-color: #007e7d;
     padding: 0;
     margin: 0;
+    /*animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;*/
 }
+
+/*@keyframes animate-fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}*/
 
 a {
     color: #000;
@@ -168,8 +191,7 @@ header {
 }
 
 #aboutMe-header {
-    /*height: auto;*/
-    height: 30%;
+    height: auto;
     width: 100%;
     padding: 10px;
 
@@ -182,9 +204,9 @@ header {
 }
 
 #title-container {
-    position: relative;
-    width: 100%;
     height: auto;
+    width: 100%;
+    position: relative;
 
     display: flex;
     justify-content: center;
@@ -193,8 +215,10 @@ header {
 
 .aboutMe-title {
     z-index: 30;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 50px;
+
+    font-family: var(--ff-pixel);
+    font-size: var(--fs-abtMeTitle);
+    
     text-align: center;
     align-self: center;
 
@@ -217,13 +241,15 @@ header {
     transform: translate(7px, 7px);
 }
 
-#aboutMe-header p {
+#aboutMe-window p {
     width: 100%;
     height: auto;
 
     text-align: center;
     align-self: center;
-    font-family: 'Press Start 2P', cursive;
+
+    font-family: var(--ff-pixel);
+    font-size: var(--fs-abtMeP);
 
     line-height: 1.25rem;
 
@@ -252,8 +278,9 @@ header {
     background-color: #5a5a5a;
     border-radius: 15px;
     padding: 15px;
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif;
+
+    font-size: var(--fs-body);
+    font-family: var(--ff-roboto);
     text-align: left;
 
     overflow: auto;
@@ -590,8 +617,10 @@ header {
     height: 35%;
     background-color: #a0a0a0;
     color: black;
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif;
+
+    font-size: var(--fs-body);
+    font-family: var(--ff-roboto);
+
     padding: 10px;
     border-radius: 3px;
     margin-bottom: 7px;
@@ -1146,10 +1175,8 @@ footer {
     margin-right: 5px;
 }
 
+/*
 @media (max-width: 1280px) {
-
-    /*About Me Window*/
-
     #aboutMe-window {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -1167,14 +1194,11 @@ footer {
         margin-bottom: 15px;
     }
 
-    /*End About Me Window*/
 
-    /*Project Window*/
     #help-window-content p {
         font-size: 18px;
     }
 
-    /*Skills*/
 
     .skills-title {
         font-size: 62px;
@@ -1192,8 +1216,6 @@ footer {
         left: 0;
         right: 0;
     }
-
-    /*About Me Window*/
 
     #aboutMe-header p {
         font-size: 18px;
@@ -1213,9 +1235,6 @@ footer {
         width: 60px;
     }
 
-    /*End AboutMe Window*/
-
-    /*Project Window*/
     .left-content {
         width: 100%;
         background: url(/img/backgrounds/space.webp);
@@ -1236,10 +1255,6 @@ footer {
         background-color: black;
     }
 
-    /*End Project Window*/
-
-    /*Skills*/
-
     .skills-title {
         font-size: 60px;
     }
@@ -1247,7 +1262,6 @@ footer {
 
 @media (max-width: 685px) {
 
-    /*About Me Window*/
     #aboutMe-window {
         padding: 30px;
     }
@@ -1265,7 +1279,6 @@ footer {
         font-size: 16px;
     }
 
-    /*Skills*/
     #skills-window {
         justify-content: flex-start;
         padding-top: 20px;
@@ -1306,7 +1319,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    /*About Me Window*/
 
     #aboutMe-header {
         height: 40%;
@@ -1334,8 +1346,6 @@ footer {
         width: 40px;
     }
 
-    /*End AboutMe Window*/
-
     .projectImage {
         height: 45%;
     }
@@ -1347,12 +1357,9 @@ footer {
 
 @media (max-width: 385px) {
 
-    /*Project Window*/
     .proyect-window-title {
         font-size: 35px;
     }
-
-    /*Skills*/
 
     #mobile-skills-title {
         font-size: 55px;
@@ -1369,7 +1376,6 @@ footer {
 
 @media (max-width: 350px) {
 
-    /*About Me Window*/
     .aboutMe-title {
         font-size: 32px;
     }
@@ -1387,16 +1393,19 @@ footer {
         font-size: 12px;
     }
 
-    /*Project Window*/
     .proyect-window-title {
         font-size: 26px;
     }
 
-    /*End Project Window*/
-
-    /*Skills*/
     #mobile-skills-title {
         font-size: 50px;
     }
 
+}*/
+
+@media (max-width: 800px) {
+
+    .aboutMe-text-container {
+        width: 80%;
+    }
 }
