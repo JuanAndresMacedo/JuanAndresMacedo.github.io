@@ -16,8 +16,15 @@
     --ff-spaceComputer: 'Space Mono', monospace;
 
     --fs-body: clamp(12px, 1.1vw, 30px);
+
     --fs-abtMeTitle: clamp(25px, 3.4vw, 100px);
     --fs-abtMeP: clamp(12px, 1.5vw, 40px);
+
+    --fs-prjTitle: clamp(30px, 3.1vw, 60px);
+
+    --fs-skillsTitle: clamp(45px, 4.5vw, 120px);
+
+    --lineHeight-abtMeText: clamp(20px, 2.0vw, 50px);
 }
 
 body {
@@ -278,7 +285,7 @@ header {
     border-radius: 15px;
     padding: 15px;
 
-    line-height: clamp(20px, 2.0vw, 50px);
+    line-height: var(--lineHeight-abtMeText);
 
     font-size: var(--fs-body);
     font-family: var(--ff-roboto);
@@ -397,8 +404,10 @@ header {
     margin: 0px 15px 0px 0px;
     width: 100%;
     height: 20%;
+
     font-weight: 500;
-    font-size: 40px;
+    font-size: var(--fs-prjTitle);
+    
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -671,7 +680,7 @@ header {
 }
 
 .skills-title {
-    font-size: 80px;
+    font-size: var(--fs-skillsTitle);
     background-color: #000000d7;
 }
 
@@ -1216,19 +1225,6 @@ footer {
 
 /*
 @media (max-width: 1280px) {
-    #aboutMe-window {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    #aboutMe-header {
-        height: 35%;
-    }
-
-    .aboutMe-text-container {
-        width: 50%;
-    }
-
     .proyect-window-title {
         margin-bottom: 15px;
     }
@@ -1237,87 +1233,10 @@ footer {
     #help-window-content p {
         font-size: 18px;
     }
+}*/
 
-
-    .skills-title {
-        font-size: 62px;
-    }
-}
-
-@media (max-width: 820px) {
-
-    #screen {
-        align-items: center;
-    }
-
-    #programs-window {
-        width: 100%;
-        left: 0;
-        right: 0;
-    }
-
-    #aboutMe-header p {
-        font-size: 18px;
-    }
-
-    #presentation-container {
-        width: 90%;
-        height: 60%;
-    }
-
-    .aboutMe-text-container {
-        width: 60%;
-        font-size: 14px;
-    }
-
-    #aboutMe-button-container {
-        width: 60px;
-    }
-
-    .left-content {
-        width: 100%;
-        background: url(/img/backgrounds/space.webp);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .right-content {
-        display: none;
-    }
-
-    .proyect-window-title {
-        margin-bottom: 0px;
-    }
-
-    .icon-text-project {
-        padding: 1px;
-        background-color: black;
-    }
-
-    .skills-title {
-        font-size: 60px;
-    }
-}
-
+/*
 @media (max-width: 685px) {
-
-    #aboutMe-window {
-        padding: 30px;
-    }
-
-    .aboutMe-title {
-        font-size: 40px;
-    }
-
-    #aboutMe-header {
-        height: 30%;
-    }
-
-    #aboutMe-header p {
-        margin-top: 4%;
-        font-size: 16px;
-    }
-
     #skills-window {
         justify-content: flex-start;
         padding-top: 20px;
@@ -1344,10 +1263,6 @@ footer {
 }
 
 @media(max-width: 585px) {
-    #aboutMe-header {
-        height: 38%;
-    }
-
     .projectImage {
         height: 50%;
     }
@@ -1358,29 +1273,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-
-    #aboutMe-header {
-        height: 40%;
-    }
-
-
-    #aboutMe-header p {
-        font-size: 14px;
-    }
-
-    #presentation-container {
-        height: 50%;
-        height: 50%;
-        padding: 0;
-        justify-content: space-evenly;
-    }
-
-    .aboutMe-text-container {
-        width: 60%;
-        height: auto;
-        font-size: 12px;
-    }
-
     #aboutMe-button-container {
         width: 40px;
     }
@@ -1395,56 +1287,99 @@ footer {
 }
 
 @media (max-width: 385px) {
-
-    .proyect-window-title {
-        font-size: 35px;
-    }
-
-    #mobile-skills-title {
-        font-size: 55px;
-    }
-
     #computer {
         width: 99%;
     }
+}*/
 
-    #computerScreen {
-        font-size: 12px;
+@media (min-width: 2000px) {
+    :root {
+        --fs-body: clamp(12px, 1.1vw, 120px);
+        --fs-abtMeTitle: clamp(25px, 3.4vw, 150px);
+        --fs-abtMeP: clamp(12px, 1.5vw, 60px);
+
+        --lineHeight-abtMeText: clamp(20px, 2.0vw, 80px);
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 820px) {
 
-    .aboutMe-title {
-        font-size: 32px;
+    #screen {
+        align-items: center;
     }
 
-    #aboutMe-header {
-        height: 38%;
+    #programs-window {
+        width: 100%;
+        left: 0;
+        right: 0;
     }
 
-    #aboutMe-header p {
-        font-size: 15px;
-    }
-
+    /*Revisar*/
     .aboutMe-text-container {
         width: 80%;
-        font-size: 12px;
+    }
+
+    #aboutMe-button-container {
+        width: 60px;
+    }
+    /*Fin revisar*/
+    
+    .left-content {
+        width: 100%;
+        background: url(/img/backgrounds/space.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .right-content {
+        display: none;
     }
 
     .proyect-window-title {
-        font-size: 26px;
+        margin-bottom: 0px;
+    }
+
+    .icon-text-project {
+        padding: 1px;
+        background-color: black;
+    }
+
+    /*SKILLS*/
+    #skills-window {
+        justify-content: flex-start;
+        padding-top: 20px;
     }
 
     #mobile-skills-title {
-        font-size: 50px;
+        display: flex;
+        /*font-size: 45px;*/
     }
 
-}*/
+    #Stack {
+        display: none;
+        animation: none;
+    }
 
-@media (max-width: 800px) {
+    #Actual {
+        display: none;
+        animation: none;
+    }
 
-    .aboutMe-text-container {
-        width: 80%;
+    #computer {
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+
+    #technologies-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .technology {
+        margin-right: 5px;
+        margin-bottom: 5px;
     }
 }
