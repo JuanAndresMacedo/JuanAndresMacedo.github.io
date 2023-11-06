@@ -361,7 +361,7 @@ backgroundChange.addEventListener("click", function () {
 });
 
 //--------------------------------------- Horizontal Slide ------------------------------------------
-const sliders = document.querySelectorAll(".projects-container");
+/*const sliders = document.querySelectorAll(".projects-container");
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -397,7 +397,7 @@ sliders.forEach(slider => {
         slider.scrollLeft = scrollLeft - walk;
         console.log("mousemove");
     });
-});
+});*/
 
 //------------------------------------ Open Project Inforamtion Window ------------------------------------------------------
 
