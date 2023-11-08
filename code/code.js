@@ -99,13 +99,17 @@ function showOpenProgram(programId, windowId, src, text) {
         newProgramIcon.alt = 'Minimized Icon';
         newProgramIcon.classList.add('minimized-window-icon');
 
-        const newProgramText = document.createElement('span');
-        newProgramText.classList.add('minimized-text');
-        newProgramText.innerHTML = text;
-
         newOpenProgram.appendChild(newProgramIcon);
-        newOpenProgram.appendChild(newProgramText);
 
+        const windowWidth = window.innerWidth;
+
+        if (windowWidth > 450) {
+            const newProgramText = document.createElement('span');
+            newProgramText.classList.add('minimized-text');
+            newProgramText.innerHTML = text;
+            newOpenProgram.appendChild(newProgramText);
+        }
+        
         newOpenProgram.addEventListener('click', () => {
             programsWindow.style.display = "none";
             closeContentWindows();
@@ -258,13 +262,13 @@ const aboutMeText = document.getElementById("aboutMe-text-container");
 let index = 0;
 const arrayText = [];
 arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
-"un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí." +
-"<br><br>En esta sección, comparto mis intereses personales, pero si estás buscando información relevante " +
-"para fines profesionales, te invito a explorar la sección de proyectos y habilidades.";
+    "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí." +
+    "<br><br>En esta sección, comparto mis intereses personales, pero si estás buscando información relevante " +
+    "para fines profesionales, te invito a explorar la sección de proyectos y habilidades.";
 
 arrayText[1] = "Como podrás notar, soy un amante de la tecnología. En ocasiones, mi trabajo se convierte en un pasatiempo, " +
-"fusionando mis intereses personales con mis proyectos profesionales.<br><br>Además, mis intereses abarcan campos tan diversos " +
-"como la astronomía  &#10024 , la biología &#x1F331 y, por supuesto, los videojuegos &#x1F47E;.";
+    "fusionando mis intereses personales con mis proyectos profesionales.<br><br>Además, mis intereses abarcan campos tan diversos " +
+    "como la astronomía  &#10024 , la biología &#x1F331 y, por supuesto, los videojuegos &#x1F47E;.";
 
 function changeArrayTextDependingOnWindowWidth() {
     const windowWidth = window.innerWidth;
@@ -339,7 +343,7 @@ backgroundChange.addEventListener("click", function () {
     const state = backgroundChange.getAttribute("data-state");
     const iconTexts = document.querySelectorAll(".icon-text");
 
-    if(state == "off"){
+    if (state == "off") {
         document.body.style.backgroundImage = "url(img/backgrounds/background.webp)";
 
         iconTexts.forEach(text => {
@@ -348,7 +352,7 @@ backgroundChange.addEventListener("click", function () {
 
         backgroundChange.setAttribute("data-state", "on");
 
-    }else{
+    } else {
         document.body.style.backgroundColor = "#007e7d";
         document.body.style.backgroundImage = "none";
 
@@ -359,45 +363,6 @@ backgroundChange.addEventListener("click", function () {
         backgroundChange.setAttribute("data-state", "off");
     }
 });
-
-//--------------------------------------- Horizontal Slide ------------------------------------------
-/*const sliders = document.querySelectorAll(".projects-container");
-let isDown = false;
-let startX;
-let scrollLeft;
-
-sliders.forEach(slider => {
-    slider.addEventListener("mousedown", (e) => {
-        isDown = true;
-        slider.classList.add("active");
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-        slider.style.cursor = "grabbing";
-        console.log("mousedown");
-    });
-
-    slider.addEventListener("mouseup", () => {
-        isDown = false;
-        slider.classList.remove("active");
-        slider.style.cursor = "grab";
-        console.log("mouseup");
-    });
-
-    slider.addEventListener("mouseleave", () => {
-        isDown = false; // Establecer isDown a falso cuando el mouse sale
-        slider.classList.remove("active");
-        slider.style.cursor = "grab";
-    });
-
-    slider.addEventListener("mousemove", (e) => {
-        if (!isDown) return; // Verificación adicional
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 1.5; //scroll-fast
-        slider.scrollLeft = scrollLeft - walk;
-        console.log("mousemove");
-    });
-});*/
 
 //------------------------------------ Open Project Inforamtion Window ------------------------------------------------------
 
