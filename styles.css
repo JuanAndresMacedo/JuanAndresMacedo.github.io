@@ -467,7 +467,7 @@ header {
 
     padding-left: 10px;
 
-    background-color: #007e7d;
+    /*background-color: #007e7d;*/
     font-size: var(--fs-iconsText);
 }
 
@@ -502,7 +502,7 @@ header {
     margin-right: 20px;
     transition: all 0.3s ease;
 
-    background-color: rgb(0, 0, 0);
+    /*background-color: rgb(0, 0, 0);*/
 }
 
 .project:hover {
@@ -539,7 +539,7 @@ header {
     padding: 5px 0;
     overflow-y: auto;
 
-    background-color: #5a5a5a;
+    /*background-color: #5a5a5a;*/
 }
 
 .icon-text {
@@ -1391,7 +1391,7 @@ footer {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
 
     /*GENERAL*/
     .icon-container-styles {

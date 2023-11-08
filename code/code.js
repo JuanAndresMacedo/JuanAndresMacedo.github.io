@@ -103,13 +103,13 @@ function showOpenProgram(programId, windowId, src, text) {
 
         const windowWidth = window.innerWidth;
 
-        if (windowWidth > 450) {
+        if (windowWidth > 480) {
             const newProgramText = document.createElement('span');
             newProgramText.classList.add('minimized-text');
             newProgramText.innerHTML = text;
             newOpenProgram.appendChild(newProgramText);
         }
-        
+
         newOpenProgram.addEventListener('click', () => {
             programsWindow.style.display = "none";
             closeContentWindows();
