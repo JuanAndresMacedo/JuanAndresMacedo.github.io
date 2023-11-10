@@ -136,7 +136,7 @@ header {
 
 /* /-> --- Screen Icons ---*/
 .icon-container-styles {
-    width: 200px;
+    width: 100px;
     height: auto;
     color: white;
 
@@ -153,7 +153,7 @@ header {
     cursor: pointer;
     text-decoration: none;
     font-size: var(--fs-iconsText);
-}
+} 
 
 .icon {
     width: 40px;
