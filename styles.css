@@ -54,8 +54,8 @@
 
     animation-name: animate-fade;
     animation-timing-function: ease-in;
-    animation-duration: 1.5s;
-    animation-delay: 0.1s;
+    animation-duration: 0.8s;
+    animation-delay: 1.0s;
     animation-fill-mode: forwards;
 }
 

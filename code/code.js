@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         programsWindow.style.display = "block";
         document.getElementById("startUpAnimation-container").style.display = "none";
-    }, 1800);
+    }, 1900);
   });
 
 function inicio() {
