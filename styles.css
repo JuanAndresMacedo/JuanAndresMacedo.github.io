@@ -41,18 +41,48 @@
     /* Firefox */
 }
 
+#startUpAnimation-container{
+    background-color: #007e7d;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: animate-fade;
+    animation-timing-function: ease-in;
+    animation-duration: 2.5s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate-fade {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#startUpLogo{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
 body {
     font-family: 'VT323', monospace;
     background-color: #007e7d;
     padding: 0;
     margin: 0;
-    /*animation-duration: 0.5s;
-    animation-name: animate-fade;
-    animation-delay: 0.2s;
-    animation-fill-mode: backwards;*/
 }
 
-/*@keyframes animate-fade {
+@keyframes animate-fade-two {
     0% {
         opacity: 0;
     }
@@ -60,7 +90,7 @@ body {
     100% {
         opacity: 1;
     }
-}*/
+}
 
 a {
     color: #000;
@@ -142,6 +172,7 @@ header {
     color: white;
     background-color: silver;
 
+    display: none;
     position: absolute;
 
     height: 80%;
@@ -153,7 +184,10 @@ header {
 }
 
 #programs-window.open {
-    animation: slideIn 0.4s ease-in-out;
+    /*animation: slideIn 0.4s ease-in-out;*/
+    animation-name: slideIn;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
 }
 
 #programs-window.hidden {
@@ -1310,6 +1344,10 @@ footer {
     .folderIcon {
         width: 150px;
     }
+
+    #startUpLogo{
+        max-width: 600px;
+    }
 }
 
 
@@ -1400,6 +1438,10 @@ footer {
 
     .minimized-window-icon {
         margin-right: 0px;
+    }
+
+    #startUpLogo{
+        max-width: 200px;
     }
     /*END GENERAL*/
 

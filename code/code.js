@@ -1,6 +1,12 @@
 
 window.addEventListener('load', inicio);
 
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        programsWindow.style.display = "block";
+        document.getElementById("startUpAnimation-container").style.display = "none";
+    }, 2800);
+  });
 
 function inicio() {
     showOpenProgram("minimized-aboutMe-window", "aboutMe-window", "img/icons/book.png", "Sobre Mi");
