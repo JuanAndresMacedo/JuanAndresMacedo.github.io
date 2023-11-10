@@ -136,14 +136,17 @@ header {
 
 /* /-> --- Screen Icons ---*/
 .icon-container-styles {
+    width: 200px;
+    height: auto;
     color: white;
+
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: auto;
+    text-align: center;
+
     /*margin-top: 20px;*/
     margin-bottom: 3%;
     transition: all 0.3s ease;
