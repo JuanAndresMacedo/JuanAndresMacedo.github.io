@@ -1,12 +1,12 @@
 
 window.addEventListener('load', inicio);
 
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
         programsWindow.style.display = "block";
         document.getElementById("startUpAnimation-container").style.display = "none";
     }, 1900);
-  });
+});
 
 function inicio() {
     showOpenProgram("minimized-aboutMe-window", "aboutMe-window", "img/icons/book.png", "Sobre Mi");
@@ -49,7 +49,7 @@ const projectCloseButton = document.getElementById("project-close-button");
 const mobileProjectCloseButton = document.getElementById("mobile-project-close-button");
 
 //------- Icons --------
-const backgroundChange = document.getElementById("landscape-container");
+const backgroundChange = document.getElementById("landscape-button");
 
 //Footer
 const footer = document.getElementById("footer");
@@ -348,8 +348,29 @@ aboutMeWindow.addEventListener("mousemove", function (event) {
 backgroundChange.addEventListener("click", function () {
     const state = backgroundChange.getAttribute("data-state");
     const iconTexts = document.querySelectorAll(".icon-text");
+    const backgroundContainer = document.getElementById("background-container");
 
     if (state == "off") {
+        backgroundContainer.style.backgroundImage = "url(img/backgrounds/background.webp)";
+
+        iconTexts.forEach(text => {
+            text.style.backgroundColor = "rgb(2, 2, 145)";
+        });
+
+        backgroundChange.setAttribute("data-state", "on");
+
+    } else {
+        backgroundContainer.style.backgroundColor = "#007e7d";
+        backgroundContainer.style.backgroundImage = "none";
+
+        iconTexts.forEach(text => {
+            text.style.backgroundColor = "transparent";
+        });
+
+        backgroundChange.setAttribute("data-state", "off");
+    }
+
+    /*if (state == "off") {
         document.body.style.backgroundImage = "url(img/backgrounds/background.webp)";
 
         iconTexts.forEach(text => {
@@ -367,7 +388,7 @@ backgroundChange.addEventListener("click", function () {
         });
 
         backgroundChange.setAttribute("data-state", "off");
-    }
+    }*/
 });
 
 //------------------------------------ Open Project Inforamtion Window ------------------------------------------------------
