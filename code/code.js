@@ -267,7 +267,7 @@ const aboutMeText = document.getElementById("aboutMe-text-container");
 
 let index = 0;
 const arrayText = [];
-arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
+arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador full-stack de Uruguay. Este es mi sitio web, " +
     "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí." +
     "<br><br>En esta sección, comparto mis intereses personales, pero si estás buscando información relevante " +
     "para fines profesionales, te invito a explorar la sección de proyectos y habilidades.";
@@ -280,7 +280,7 @@ function changeArrayTextDependingOnWindowWidth() {
     const windowWidth = window.innerWidth;
 
     if (windowWidth < 600) {
-        arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador front-end de Uruguay. Este es mi sitio web, " +
+        arrayText[0] = "¡Hola! Soy <strong>Juan</strong>, desarrollador full-stack de Uruguay. Este es mi sitio web, " +
             "un lugar donde comparto mis proyectos y permito que las personas conozcan un poco más sobre mí.";
 
         arrayText[1] = "En esta sección, comparto mis intereses personales, pero si estás buscando información relevante " +
